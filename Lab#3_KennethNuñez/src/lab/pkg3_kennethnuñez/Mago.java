@@ -30,7 +30,7 @@ public class Mago extends PersonajesAliados {
     public void setHP(int HP) {
         this.HP = HP;
     }
-    
+
     public int getAP() {
         return AP;
     }
@@ -79,15 +79,10 @@ public class Mago extends PersonajesAliados {
         this.ProbabilidadDeCritico = ProbabilidadDeCritico;
     }
 
-    
-    
     @Override
     public String toString() {
         return "Mago{" + "HP=" + HP + ", AP=" + AP + ", AD=" + AD + ", eficacia=" + eficacia + ", velocidad=" + velocidad + ", suerte=" + suerte + ", ProbabilidadDeCritico=" + ProbabilidadDeCritico + '}';
     }
-    
-    
-
    
    
 }

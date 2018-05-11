@@ -8,6 +8,7 @@ static Scanner read = new Scanner(System.in);
 static boolean dificulty = false;
 static int Dificultad;
 static Random Random = new Random();
+static ArrayList<PersonajesAliados> PlayerOne = new ArrayList();
     public static void main(String[] args) {
         System.out.println("Bienvenido al laboratorio de Kenneth Nuñez 11741149. ");
         char resp = 'S';
@@ -69,13 +70,20 @@ static Random Random = new Random();
                     int option3 = read.nextInt();
                     switch(option3){
                         case 1:
-                            
+                            PersonajesAliados Arquero = new Arquero(Nombre, Edad, Estatura, Peso, ColorDePiel, ColorDePelo, Raza);
+                            PlayerOne.add(Arquero);
                             break;
                         case 2:
+                            PersonajesAliados Berzerk = new Berzerk(Nombre, Edad, Estatura, Peso, ColorDePiel, ColorDePelo, Raza);
+                            PlayerOne.add(Berzerk);
                             break;
                         case 3:
+                            PersonajesAliados Picaro = new Picaro(Nombre, Edad, Estatura, Peso, ColorDePiel, ColorDePelo, Raza);
+                            PlayerOne.add(Picaro);
                             break;
                         case 4:
+                            PersonajesAliados Mago = new Mago(Nombre, Edad, Estatura, Peso, ColorDePiel, ColorDePelo, Raza);
+                            PlayerOne.add(Mago);
                             break;
                         default:
                             System.out.println("Opcion mas que invalida. ");

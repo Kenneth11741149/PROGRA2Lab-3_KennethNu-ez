@@ -71,11 +71,12 @@ public class Picaro extends PersonajesAliados{
         this.ProbabilidadDeCritico = ProbabilidadDeCritico;
     }
 
-    
     @Override
     public String toString() {
         return "Picaro{" + "HP=" + HP + ", AD=" + AD + ", eficacia=" + eficacia + ", velocidad=" + velocidad + ", suerte=" + suerte + ", ProbabilidadDeCritico=" + ProbabilidadDeCritico + '}';
     }
+
    
+
    
 }
