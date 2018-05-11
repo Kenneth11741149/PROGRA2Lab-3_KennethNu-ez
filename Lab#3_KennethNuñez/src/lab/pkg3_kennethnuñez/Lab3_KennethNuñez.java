@@ -1,21 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab.pkg3_kennethnuñez;
+import java.util.Scanner;
+import java.util.ArrayList;
 
-/**
- *
- * @author Burni
- */
+
 public class Lab3_KennethNuñez {
+static Scanner read = new Scanner(System.in);
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("Bienvenido al laboratorio de Kenneth Nuñez 11741149. ");
+        char resp = 'S';
+        while(resp == 'S' || resp == 's'){
+        System.out.println("1. Iniciar. ");
+        System.out.println("2. Nivel de Dificultad. ");
+        System.out.println("3. Salir. ");
+        int option = read.nextInt();
+        switch(option){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                System.exit(0);
+                break;
+            default:
+                System.out.println("Su opcion esta totalmente Incorrecta. ");
+                break;
+           
+        }
+    }
     }
     
 }
