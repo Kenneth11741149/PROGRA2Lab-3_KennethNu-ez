@@ -161,10 +161,11 @@ static ArrayList<PersonajesAliados> PlayerOne = new ArrayList();
                 if(tester > dadogame ){
                     System.out.println("Ha encontrado un Objeto. ");
                     ObjectGenerator().toString();
+                    
                 } else if(tester < dadogame) {
                     if(enemies > 0){
                     System.out.println("Ha encontrado un enemigo. ");
-                     Fight(PlayerOne.get(0), EnemyGenerator());
+                     //Fight(PlayerOne.get(0), EnemyGenerator());
                     }
                 }
             } else if(PlayerOne.get(0) instanceof Berzerk){
@@ -176,7 +177,7 @@ static ArrayList<PersonajesAliados> PlayerOne = new ArrayList();
                 } else if(tester < dadogame) {
                     if(enemies > 0){
                     System.out.println("Ha encontrado un enemigo. ");
-                     Fight(PlayerOne.get(0), EnemyGenerator());
+                     //Fight(PlayerOne.get(0), EnemyGenerator());
                     }
                 }
             } else if(PlayerOne.get(0) instanceof Picaro){
@@ -188,7 +189,7 @@ static ArrayList<PersonajesAliados> PlayerOne = new ArrayList();
                 } else if(tester < dadogame) {
                     if(enemies > 0){
                     System.out.println("Ha encontrado un enemigo. ");
-                     Fight(PlayerOne.get(0), EnemyGenerator());
+                     //Fight(PlayerOne.get(0), EnemyGenerator());
                     }
                 }
             } else if(PlayerOne.get(0) instanceof Mago){
@@ -200,7 +201,7 @@ static ArrayList<PersonajesAliados> PlayerOne = new ArrayList();
                 } else if(tester < dadogame) {
                     if(enemies > 0){
                     System.out.println("Ha encontrado un enemigo. ");
-                     Fight(PlayerOne.get(0), EnemyGenerator());
+                     //Fight(PlayerOne.get(0), EnemyGenerator());
                     }
                 }
             }
