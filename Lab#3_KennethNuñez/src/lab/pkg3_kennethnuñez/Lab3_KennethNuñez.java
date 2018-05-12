@@ -13,6 +13,7 @@ static ArrayList<PersonajesAliados> PlayerOne = new ArrayList();
         System.out.println("Bienvenido al laboratorio de Kenneth Nuñez 11741149. ");
         char resp = 'S';
         while(resp == 'S' || resp == 's'){
+            try{
             System.out.println("");
         System.out.println("1. Iniciar. ");
         System.out.println("2. Nivel de Dificultad. ");
@@ -129,6 +130,10 @@ static ArrayList<PersonajesAliados> PlayerOne = new ArrayList();
                 break;
            
         }
+            }catch(Exception e){
+                
+            }
+        
     }
     }
     static void Simulacion(){
@@ -155,16 +160,61 @@ static ArrayList<PersonajesAliados> PlayerOne = new ArrayList();
                 int dadogame = 1+Random.nextInt(100);
                 if(tester > dadogame ){
                     System.out.println("Ha encontrado un Objeto. ");
+                    ObjectGenerator().toString();
                 } else if(tester < dadogame) {
+                    if(enemies > 0){
                     System.out.println("Ha encontrado un enemigo. ");
+                     Fight(PlayerOne.get(0), EnemyGenerator());
+                    }
                 }
             } else if(PlayerOne.get(0) instanceof Berzerk){
-                System.out.println("Berzerk");
+                int tester = ((Berzerk)PlayerOne.get(0)).getSuerte();
+                int dadogame = 1+Random.nextInt(100);
+                if(tester > dadogame ){
+                    System.out.println("Ha encontrado un Objeto. ");
+                    ObjectGenerator().toString();
+                } else if(tester < dadogame) {
+                    if(enemies > 0){
+                    System.out.println("Ha encontrado un enemigo. ");
+                     Fight(PlayerOne.get(0), EnemyGenerator());
+                    }
+                }
             } else if(PlayerOne.get(0) instanceof Picaro){
-                System.out.println("Picaro");
+                int tester = ((Picaro)PlayerOne.get(0)).getSuerte();
+                int dadogame = 1+Random.nextInt(100);
+                if(tester > dadogame ){
+                    System.out.println("Ha encontrado un Objeto. ");
+                    ObjectGenerator().toString();
+                } else if(tester < dadogame) {
+                    if(enemies > 0){
+                    System.out.println("Ha encontrado un enemigo. ");
+                     Fight(PlayerOne.get(0), EnemyGenerator());
+                    }
+                }
             } else if(PlayerOne.get(0) instanceof Mago){
-                System.out.println("Mago");
+                int tester = ((Mago)PlayerOne.get(0)).getSuerte();
+                int dadogame = 1+Random.nextInt(100);
+                if(tester > dadogame ){
+                    System.out.println("Ha encontrado un Objeto. ");
+                    ObjectGenerator().toString();
+                } else if(tester < dadogame) {
+                    if(enemies > 0){
+                    System.out.println("Ha encontrado un enemigo. ");
+                     Fight(PlayerOne.get(0), EnemyGenerator());
+                    }
+                }
             }
         }
+    } 
+    static Objetos ObjectGenerator(){
+        int luck = 1+Random.nextInt(2);
+        Objetos P;
+        if(luck == 1 ){
+           P = new Armas();
+        } else {
+           P = new Talismanes();
+        }
+        return P;
+        
     }
 }
