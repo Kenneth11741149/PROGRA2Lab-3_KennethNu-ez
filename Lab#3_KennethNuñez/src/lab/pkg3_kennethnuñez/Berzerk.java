@@ -9,7 +9,7 @@ public class Berzerk extends PersonajesAliados{
    private int velocidad = 20;
    private int suerte = 15;
    private int ProbabilidadDeCritico = 1+Random.nextInt();
-
+   
     public Berzerk(String Nombre, String Edad, String Estatura, String Peso, String ColorDePiel, String ColorDePelo, String Raza) {
         super(Nombre, Edad, Estatura, Peso, ColorDePiel, ColorDePelo, Raza);
     }

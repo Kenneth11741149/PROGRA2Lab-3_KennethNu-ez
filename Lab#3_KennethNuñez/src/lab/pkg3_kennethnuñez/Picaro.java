@@ -10,7 +10,6 @@ public class Picaro extends PersonajesAliados{
    private int velocidad = 30;
    private int suerte = 50;
    private int ProbabilidadDeCritico = 1+Random.nextInt();
-
     public Picaro(String Nombre, String Edad, String Estatura, String Peso, String ColorDePiel, String ColorDePelo, String Raza) {
         super(Nombre, Edad, Estatura, Peso, ColorDePiel, ColorDePelo, Raza);
     }

@@ -88,6 +88,7 @@ static ArrayList<PersonajesAliados> PlayerOne = new ArrayList();
                         default:
                             System.out.println("Opcion mas que invalida. ");
                     }
+                    Simulacion();
                 } else {
                     System.out.println("No ha elejido la dificultad. ");
                 }
@@ -130,5 +131,40 @@ static ArrayList<PersonajesAliados> PlayerOne = new ArrayList();
         }
     }
     }
-    
+    static void Simulacion(){
+        System.out.println("El juego ha empezado. Su player: ");
+        System.out.println(PlayerOne);
+        int size;
+        int enemies;
+        if(Dificultad == 1){
+            size = 50;
+            enemies = 5;
+        } else if(Dificultad == 2){
+            size = 100;
+            enemies = 10;
+        } else {
+            size = 120;
+            enemies = 15;
+        }
+        int dado;
+        while(size > 0){
+            dado = 1+Random.nextInt(20);
+            size = size - dado;
+            if(PlayerOne.get(0) instanceof Arquero){
+                int tester = ((Arquero)PlayerOne.get(0)).getSuerte();
+                int dadogame = 1+Random.nextInt(100);
+                if(tester > dadogame ){
+                    System.out.println("Ha encontrado un Objeto. ");
+                } else if(tester < dadogame) {
+                    System.out.println("Ha encontrado un enemigo. ");
+                }
+            } else if(PlayerOne.get(0) instanceof Berzerk){
+                System.out.println("Berzerk");
+            } else if(PlayerOne.get(0) instanceof Picaro){
+                System.out.println("Picaro");
+            } else if(PlayerOne.get(0) instanceof Mago){
+                System.out.println("Mago");
+            }
+        }
+    }
 }
